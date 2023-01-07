@@ -5,24 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body{
+            background-image: url('bg5.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .email {
+            position: absolute;
+            width: 0;
+            height: 57px;
+            left: 926px;
+            top: 217px;
+        }
+        .pass {
+            position: absolute;
+            width: 0;
+            height: 57px;
+            left: 926px;
+            top: 250px;
+        }
+        .login {
+            position: absolute;
+            width: 0;
+            height: 57px;
+            left: 990px;
+            top: 285px;
+        }
+        .fpass {
+            position: absolute;
+            width: 50;
+            height: 57px;
+            left: 960px;
+            top: 330px;
+        }
+        .reg {
+            position: absolute;
+            width: 50;
+            height: 57px;
+            left: 920px;
+            top: 390px;
+        }
+    </style>
 </head>
 <body>
-<div> 
-    <input placeholder="Username" type="text">
-</div>
-<div>
-    <input placeholder="Password" type="text">
-
-</div>
-<div>
-    <button onclick="window.location='dashBoard.html';">Login</button>
-</div>
-<div>
-    <a href='forgotPassword.html'>Forgot password</a>
-</div>
-<div>
-    <a>Don't have an account?</a>
-    <a href="Register.html">Register</a>
+<div class="log">
+    <div class="email"> 
+        <input placeholder="Email" type="text">
+    </div>
+    <div class="pass">
+        <input placeholder="Password" type="text">
+    
+    </div>
+    <div class="login">
+        <button onclick="window.location='dashBoard.html';">Login</button>
+    </div>
+    <div class="fpass">
+        <a href='forgotPassword.html'>Forgot password</a>
+    </div>
+    <div class="reg">
+        <a>Don't have an account?</a>
+        <a href="Register.html">Register</a>
+    </div>
 </div>
 </body>
 </html>
