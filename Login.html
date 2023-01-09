@@ -16,7 +16,7 @@
             width: 50px;
             height: 57px;
             left: 926px;
-            top: 217px;
+            top: 207px;
             
         }
         .pass {
@@ -29,24 +29,29 @@
         .login {
             position: absolute;
             width: 50px;
-            height: 57px;
-            left: 990px;
-            top: 285px;
+            height: 97px;
+            left: 963px;
+            top: 300px;
         }
         .fpass {
             position: absolute;
             width: 150px;
             height: 107px;
-            left: 960px;
-            top: 330px;
-
+            left: 974px;
+            top: 360px;
+        }
+        .fp{
+            font-family: 'Poppins';
+            font-style: normal;
+            color: #000000;
+            font-size: 14px;
         }
         .reg {
             position: absolute;
-            width: 200px;
+            width: 248px;
             height: 57px;
-            left: 920px;
-            top: 390px;
+            left: 913px;
+            top: 445px;
         }
         .ec {
             position: absolute;
@@ -92,6 +97,48 @@
             background: #FCFCFC;
             border-radius: 17px;
         }
+        .em{
+            border-radius: 25px;
+            border: 1px solid #000000;
+            background: rgba(235, 232, 205, 0.92);
+            padding: 10px; 
+            width: 160px;
+            height: 7px;
+        }
+        .ps{
+            border-radius: 25px;
+            border: 1px solid #000000;
+            background: rgba(235, 232, 205, 0.92);
+            padding: 10px; 
+            width: 160px;
+            height: 7px;
+        }
+        .lg{
+            background: #DCB900;
+            border-radius: 12px;
+            border: 1px solid #000000;
+            width: 120px;
+            height: 7px;  
+            padding: 13px; 
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 0%;
+        }
+        .line{
+            position: absolute;
+            width: 245px;
+            height: 0px;
+            left: 890px;
+            top: 405px;
+        }
+        .rg{
+            font-family: 'Poppins';
+            font-style: normal;
+            color: #004fb6;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -105,22 +152,23 @@
         Control. Conserve. Be Wise
     </div>
     <div class="email"> 
-        <input placeholder="Email" type="text">
+        <input class="em" placeholder="Email" type="text">
     </div>
     <div class="pass">
-        <input placeholder="Password" type="text">
+        <input class="ps" placeholder="Password" type="text">
     
     </div>
     <div class="login">
-        <button onclick="window.location='dashBoard.html';">Login</button>
+        <button class="lg" onclick="window.location='dashBoard.html';">LOG IN</button>
     </div>
     <div class="fpass">
-        <a href='forgotPassword.html'>Forgot password</a>
+        <a class="fp" href='forgotPassword.html'>Forgot Password?</a>
     </div>
     <div class="reg">
         <a>Don't have an account?</a>
-        <a href="Register.html">Register</a>
+        <a class="rg" href="Register.html"><b>Register</b></a>
     </div>
+    <hr class="line">
 </div>
 </body>
 </html>
