@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-      
-  
-
   /* The popup form - hidden by default */
   .form-popup {
   display: none;
@@ -32,26 +29,25 @@ top:0px;
 
 /* Full-width input fields */
 .form-container input[type=text] {
-  width:95%;
+  position: fixed;
+  width:500px;
   padding: 15px;
   margin: 5px 0 22px 0;
   border-radius: 25px;
   background: rgba(235, 232, 205, 0.92);
   text-align: center;
+  top: 310px;
+  left: 365px;
 }
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    background: rgba(235, 232, 205, 0.92);
-  outline: none;
-}
 
 /* Set a style for the submit/login button */
 .btn {
+    position: fixed;
     background: #DCB900;
     border-radius: 12px;
-            border: 1px solid #000000;
-            width: 100%;
+            border: 0px solid #000000;
+            width: 400px;
             height: 40px;  
             padding: 13px; 
             font-family: 'Poppins';
@@ -59,6 +55,8 @@ top:0px;
             font-weight: 600;
             font-size: 12px;
             line-height: 10%;
+            left: 430px;
+            top: 400px;
 }
 .btncancel{
     position: absolute;
@@ -75,12 +73,6 @@ top:0px;
             line-height: 10%;
             left: 585px;
             top: 5px;
-}
-
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
 }
         body{
             background-image: url('bg1.jpg');
@@ -223,8 +215,149 @@ top:0px;
             line-height: 250%;
         }
         .txt{
+            position: fixed;
             text-align: center;
-            line-height: 350%;
+            line-height: 150%;
+            width: 400px;
+            left: 430px;
+            top: 230px;
+        }
+         
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-buttonreg {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+  
+}
+
+/* The popup form - hidden by default */
+.form-popupreg {
+display: none;
+position: absolute;
+width: 656px;
+height: 350px;
+left: 300px;
+top: 120px;
+z-index: 9;
+}
+
+.btncancelreg{
+            position: absolute;
+    background: rgba(235, 232, 205, 0.92);
+    border-radius: 10px;
+    border: 1px solid #000000;
+            width: 10%;
+            height: 7px;  
+            padding: 13px; 
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 10%;
+            left: 585px;
+            top: 5px;
+        }
+        .regi{
+            position: absolute;
+            left: 20px;
+            top: -40px;
+            text-align: center;
+            line-height: 250%;
+        }
+        .underregi{
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            text-align: center;
+            line-height: 250%;
+            font-size: large;
+        }
+        .eml{
+            position: absolute;
+            width:500px;
+            padding: 10px;
+            margin: 5px 0 22px 0;
+            border-radius: 25px;
+            background: rgba(235, 232, 205, 0.92);
+            text-align: center;
+            top: 140px;
+            left: 67px;
+        }
+        .pswd{
+            position: absolute;
+            width:500px;
+            padding: 10px;
+            margin: 5px 0 22px 0;
+            border-radius: 25px;
+            background: rgba(235, 232, 205, 0.92);
+            text-align: center;
+            top: 200px;
+            left: 67px;
+        }
+        .cpswd {
+            position: absolute;
+            width:500px;
+            padding: 10px;
+            margin: 5px 0 22px 0;
+            border-radius: 25px;
+            background: rgba(235, 232, 205, 0.92);
+            text-align: center;
+            top: 260px;
+            left: 67px;
+        }
+        .lname{
+            position: absolute;
+            width:210px;
+            padding: 10px;
+            margin: 5px 0 22px 0;
+            border-radius: 25px;
+            background: rgba(235, 232, 205, 0.92);
+            text-align: center;
+            top: 80px;
+            left: 67px;
+        }
+        .fname{
+            position: absolute;
+            width:210px;
+            padding: 10px;
+            margin: 5px 0 22px 0;
+            border-radius: 25px;
+            background: rgba(235, 232, 205, 0.92);
+            text-align: center;
+            top: 80px;
+            left: 357px;
+        }
+        .submitreg{
+            position: fixed;
+            background: #DCB900;
+            border-radius: 12px;
+            border: 0px solid #000000;
+            width: 400px;
+            height: 40px;  
+            padding: 13px; 
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 10%;
+            left: 430px;
+            top: 440px;
+        }
+        .regs{
+            outline: none;
+            border: #FCFCFC;
+            background-color: #FCFCFC;
+            font-size: 15px;
+            color: rgb(0, 83, 160);
+            
         }
     </style>
 </head>
@@ -238,8 +371,9 @@ top:0px;
     <div class="txt"><b>Enter you Email address and we will send you
         instructions to reset your password.    </b></div>
     <input type="text" placeholder="Email" name="email" required>
-
-    <button type="submit" class="btn" >SEND EMAIL</button>
+<div>    
+    <button type="text" class="btn" onclick="window.location.href='Verification.html',true;">SEND EMAIL</button>
+</div>
   </form>
 </div>
 
@@ -256,21 +390,41 @@ top:0px;
         <input class="em" placeholder="Email" type="text">
     </div>
     <div class="pass">
-        <input class="ps" placeholder="Password" type="text">
+        <input type="password" class="ps" placeholder="Password" type="text">
     
     </div>
     <div class="login">
         <button class="lg" onclick="window.location='dashBoard.html';">LOG IN</button>
     </div>
     <div class="fpass">
-        <a class="fp" onclick="openForm()"><u>Forgot Password?</u> </a>
+        <a class="fp" onclick="openForm()"><u><b>Forgot Password?</b></u></a>
     </div>
     <div class="reg">
-        <a>Don't have an account?</a>
-        <a class="rg" href="Register.html"><b>Register</b></a>
+        <a><b>Don't have an account?</b></a>
+            <a class="regs" onclick="openFormreg()"><u><b>Register</b></u></a>
     </div>
     <hr class="line">
 </div>
+<div class="form-popupreg" id="myFormreg">
+    <form action="/action_page.php" class="form-container">
+  
+      <button type='button' class="btncancelreg" onClick="closeFormreg()">X</button>
+      <h1 class="regi">Sign up</h1>
+      <div class="underregi">It’s quick and easy.</div>
+      <input class="fname" placeholder="First Name" required>
+
+      <input class="lname" placeholder="Last Name" required>
+  
+      <input class="eml" placeholder="Enter Email" required>
+  
+      <input class="pswd" type="password" placeholder="Enter Password" name="psw" required>
+  
+      <input class="cpswd" type="password" placeholder="Confirm Password" name="psw" required>
+  
+      <button onclick="window.location='Login.html';" class="submitreg" type="submit">REGISTER</button>
+      
+    </form>
+  </div>
 <script>
     function openForm() {
       document.getElementById("myForm").style.display = "block";
@@ -279,6 +433,13 @@ top:0px;
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
     }
+    function openFormreg() {
+  document.getElementById("myFormreg").style.display = "block";
+}
+
+function closeFormreg() {
+  document.getElementById("myFormreg").style.display = "none";
+}
     </script>
 </body>
 </html>
