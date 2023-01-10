@@ -6,11 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
+      
+  
+
+  /* The popup form - hidden by default */
+  .form-popup {
+  display: none;
+  position: absolute;
+width: 656px;
+height: 250px;
+left: 300px;
+top: 110px;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 699px;
+  padding: 15px;
+  left: 300px;
+top:0px;
+  background-color: #FCD859;
+  height: 350px;
+}
+
+/* Full-width input fields */
+.form-container input[type=text] {
+  width:95%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border-radius: 25px;
+  background: rgba(235, 232, 205, 0.92);
+  text-align: center;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background: rgba(235, 232, 205, 0.92);
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.btn {
+    background: #DCB900;
+    border-radius: 12px;
+            border: 1px solid #000000;
+            width: 100%;
+            height: 40px;  
+            padding: 13px; 
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 10%;
+}
+.btncancel{
+    position: absolute;
+    background: rgba(235, 232, 205, 0.92);
+    border-radius: 10px;
+    border: 1px solid #000000;
+            width: 10%;
+            height: 7px;  
+            padding: 13px; 
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 10%;
+            left: 585px;
+            top: 5px;
+}
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
         body{
             background-image: url('bg1.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
+            
         }
         .email {
             position: absolute;
@@ -39,14 +116,14 @@
             position: absolute;
             width: 150px;
             height: 107px;
-            left: 974px;
+            left: 978px;
             top: 360px;
         }
         .fp{
             font-family: 'Poppins';
             font-style: normal;
-            color: #000000;
-            font-size: 14px;
+            color: #004fb6;
+            font-size: 13px;
         }
         .reg {
             position: absolute;
@@ -141,9 +218,31 @@
             color: #004fb6;
             font-size: 18px;
         }
+        .lg1 {
+            text-align: center;
+            line-height: 250%;
+        }
+        .txt{
+            text-align: center;
+            line-height: 350%;
+        }
     </style>
 </head>
 <body>
+
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <button type="button" class="btncancel" onclick="closeForm()">X</button>
+    <h1 class="lg1">Login</h1>
+    <div class="txt"><b>Enter you Email address and we will send you
+        instructions to reset your password.    </b></div>
+    <input type="text" placeholder="Email" name="email" required>
+
+    <button type="submit" class="btn" >SEND EMAIL</button>
+  </form>
+</div>
+
 <div class="white">
     <div class="wt"></div>
     <img class="logo" src="logo2.png" alt="">
@@ -164,7 +263,7 @@
         <button class="lg" onclick="window.location='dashBoard.html';">LOG IN</button>
     </div>
     <div class="fpass">
-        <a class="fp" href='forgotPassword.html'>Forgot Password?</a>
+        <a class="fp" onclick="openForm()"><u>Forgot Password?</u> </a>
     </div>
     <div class="reg">
         <a>Don't have an account?</a>
@@ -172,5 +271,14 @@
     </div>
     <hr class="line">
 </div>
+<script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
 </body>
 </html>
